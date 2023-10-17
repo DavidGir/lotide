@@ -27,3 +27,5 @@ const newArray = tail(originalArray);
 assertEqual(originalArray.length, 3);  // Original array should still have 3 elements.
 assertEqual(newArray.length, 2);  // New array should have 2 elements.
 
+// Test case 4 to check first element of the returned array from the tail function:
+assertEqual(newArray[0], "Lighthouse");  // First element of new array should be "Lighthouse".
