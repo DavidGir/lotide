@@ -16,6 +16,14 @@ const tail = function(array) {
 const result = tail(["Hello"]);
 assertEqual(result.length, 0); // Should pass; an array with only one element should yield an empty array for its tail.
 
-// Test Case 2
+// Test Case 2:
 const result2 = tail([]);
-assertEqual(result2[0], "Labs"); // Should fail; as an empty array should yield empty undefined for its tail.
+assertEqual(result2.length, 0); // Should pass; as an empty array should yield empty for its tail.
+
+// Test case 3 to check if tail function does not mutate the original array:
+const originalArray = ["Hello", "Lighthouse", "Labs"];
+const newArray = tail(originalArray);
+
+assertEqual(originalArray.length, 3);  // Original array should still have 3 elements.
+assertEqual(newArray.length, 2);  // New array should have 2 elements.
+
