@@ -26,9 +26,7 @@ const assertArraysEqual = function(array1, array2) {
   //Print results If isMatch true or false
   if (isMatch) {
     console.log(`✅✅ The arrays ${array1} and ${array2} are equal.`);
-  }
-
-  if (!isMatch) {
+  } else {
     console.log(`❌❌ The arrays ${array1} and ${array2} are not equal.`);
   }
 };
@@ -45,7 +43,7 @@ const assertArraysEqual = function(array1, array2) {
 const middle = function(array) {
   // Initialize variable containing empty array:
   let middleElements = [];
-
+  let middleGround = array.length / 2;
   // If statements for edge-cases
   // Edge-case 1:
   if (array.length < 3) {
@@ -53,23 +51,20 @@ const middle = function(array) {
   }
   // Edge-case 2:
   if (array.length % 2 !== 0) {
-    let middleIndex = Math.floor(array.length / 2);
+    let middleIndex = Math.floor(middleGround);
     // Push results from conditionals to empty array:
     middleElements.push(array[middleIndex]);
-    return middleElements;
   }
   // Edge-case 3:
   if (array.length % 2 === 0) {
-    let middleFirstIndex = (array.length / 2) - 1;
-    let middleSecondIndex = (array.length / 2);
+    let middleFirstIndex = (middleGround) - 1;
+    let middleSecondIndex = (middleGround);
     middleElements.push(array[middleFirstIndex], array[middleSecondIndex]);
-    return middleElements;
   }
+  return middleElements;
 };
 
 // TEST CODE:
-
-// Test assertions for middle function:
 // console.log(middle([1])); // => []
 // console.log(middle([1, 2])); // => []
 
