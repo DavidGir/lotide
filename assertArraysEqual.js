@@ -23,11 +23,11 @@ const assertArraysEqual = function(array1, array2) {
 
   //Print results If isMatch true or false
   if (isMatch) {
-    console.log("✅✅ The arrays are equal.");
+    console.log(`✅✅ The arrays ${array1} and ${array2} are equal.`);
   }
 
   if (!isMatch) {
-    console.log("❌❌ The arrays are not equal.");
+    console.log(`❌❌ The arrays ${array1} and ${array2} are not equal.`);
   }
 };
 
