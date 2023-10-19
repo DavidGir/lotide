@@ -61,5 +61,5 @@ const letterPositions = function(sentence) {
 };
 
 // Test code:
-assertArraysEqual(["h", "e", "l", "l", "o"], [0, 1, 2, 3, 4]); // should fail
 assertArraysEqual(letterPositions("hello").e, [1]); // should pass
+assertArraysEqual(letterPositions("hello").l, [2, 3]); // should pass
