@@ -75,16 +75,13 @@ const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] }
 // Declare function:
 const assertObjectsEqual = function(object1, object2) {
   
-  const inspect = require("util").inspect; 
+  const inspect = require("util").inspect;
   const objectsAreEqual = eqObjects(object1, object2);
-  const passAssertion = console.log(`✅✅ The objects ${inspect(object1)} and ${inspect(object2)} are equal.`);
-  const failAssertion = console.log(`❌❌ The objects ${inspect(object1)} and ${inspect(object2)} are not equal.`);
 
   if (objectsAreEqual) {
-    return passAssertion;
-  }
-  if (!objectsAreEqual) {
-    return failAssertion;
+    console.log(`✅✅ The objects ${inspect(object1)} and ${inspect(object2)} are equal.`);
+  } else {
+    console.log(`❌❌ The objects ${inspect(object1)} and ${inspect(object2)} are not equal.`);
   }
 };
 
