@@ -36,6 +36,7 @@ const countLetters = function(string) {
 
 console.log(countLetters("I love chicken")); // => { I: 1, l: 1, o: 1, v: 1, e: 2, c: 2, h: 1, i: 1, k: 1, n: 1 }
 
-
+const result = countLetters("I love chicken");
+assertEqual(result['e'], 2);
 
 
