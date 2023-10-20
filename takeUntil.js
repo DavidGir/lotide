@@ -45,10 +45,16 @@ const assertArraysEqual = function(array1, array2) {
 // To keep things simple, the callback should only be provided one value: The item in the array.
 
 const takeUntil = function(array, callback) {
+  // Initialize an empty array to hold elements that satisfy callback condition:
   const results = [];
+  // Loop through each element of the input array:
   for (let item of array) {
+    // Use callback function to check if element should terminate the loop
+    //The callback is expected to return true if loop shoudl terminate:
     if (callback(item) !== true) {
+      // Push elements that don't satisfy condition in the empty results array:
       results.push(item);
+      // If element satisfies condition; return results:
     } else {
       return results;
     }
