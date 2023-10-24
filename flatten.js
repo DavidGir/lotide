@@ -23,13 +23,9 @@ const flatten = function(arr) {
 };
 
 // Expected input:
-const inputArray = [1, 2, [3, 4], 5, [6]];
-const resultArray = flatten(inputArray);
+// const inputArray = [1, 2, [3, 4], 5, [6]];
+// const resultArray = flatten(inputArray);
 // Print to console; expected output => [1, 2, 3, 4, 5, 6]
-console.log(resultArray);
+// console.log(resultArray);
 
-// Test code:
-assertArraysEqual(eqArrays(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]), true);
-assertArraysEqual(eqArrays(flatten([1, 2, 3, 4, 5]), [1, 2, 3, 4, 5]), true);
-assertArraysEqual(eqArrays(flatten([]), []), true);
-assertArraysEqual(eqArrays(flatten([1, [2, [3, [4]]], 5]), [1, 2, 3, 4, 5]), true);
+module.exports = flatten;
