@@ -7,9 +7,9 @@ const assertArraysEqual = function(array1, array2) {
 
   //Print results If isMatch true or false
   if (isMatch) {
-    console.log(`✅✅ The arrays ${array1} and ${array2} are equal.`);
+    console.log(`✅✅ Assertion passed: ${array1} and ${array2}`);
   } else {
-    console.log(`❌❌ The arrays ${array1} and ${array2} are not equal.`);
+    console.log(`❌❌ Assertion failed: ${array1} and ${array2}`);
   }
 };
 
