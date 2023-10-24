@@ -18,4 +18,9 @@ describe("#middle function", () => {
   it("should return the middle element ['b'] for an input array of ['a', 'b', 'c']", () => {
     assert.deepEqual(middle(["a", "b", "c"]), ["b"]);
   });
+  it("should not modify the original array", () => {
+    const inputArray = ["Hello", "Lighthouse", "Labs"];
+    middle(inputArray);
+    assert.deepEqual(inputArray, ["Hello", "Lighthouse", "Labs"]);
+  });
 });

@@ -14,4 +14,9 @@ describe("#tail function", () => {
     const expectedArray = tail(inputArray);
     assert.equal(expectedArray[0], "Lighthouse");
   });
+  it("should not modify the original array", () => {
+    const inputArray = ["Hello", "Lighthouse", "Labs"];
+    tail(inputArray);
+    assert.deepEqual(inputArray, ["Hello", "Lighthouse", "Labs"]);
+  });
 });
