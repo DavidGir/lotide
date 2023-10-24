@@ -1,37 +1,5 @@
-// Using function eqArrays for checking array equality and returns result:
-const eqArrays = function(array1, array2) {
-  // Check if both arrays have same length, if not return false.
-  if (array1.length !== array2.length) {
-    return false;
-  }
-
-  // For loop to iterate through elements of the first array.
-  for (let i = 0; i < array1.length; i++) {
-    // Compare both array indices
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  //Returns true if not false
-  return true;
-};
-
-//-----------------------------------------------------------------------
-
-// Creating function assertArraysEqual for handling output based on the result through call function:
-const assertArraysEqual = function(array1, array2) {
-  // Call function eqArrays with array1 and array2 as arguments:
-  let isMatch = eqArrays(array1, array2);
-
-  //Print results If isMatch true or false
-  if (isMatch) {
-    console.log(`✅✅ The arrays ${array1} and ${array2} are equal.`);
-  } else {
-    console.log(`❌❌ The arrays ${array1} and ${array2} are not equal.`);
-  }
-};
-
-//-----------------------------------------------------------------------
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 // Create middle function that should return an array with only the middle element(s) of the provided array. This means that the length of the returned elements could vary.
 
@@ -64,20 +32,4 @@ const middle = function(array) {
   return middleElements;
 };
 
-// TEST CODE:
-// console.log(middle([1])); // => []
-// console.log(middle([1, 2])); // => []
-
-// console.log(middle([1, 2, 3])); // => [2]
-// console.log(middle([1, 2, 3, 4, 5])); // => [3]
-
-// console.log(middle([1, 2, 3, 4])); // => [2, 3]
-// console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
-
-// Assertion tests for the middle function:
-assertArraysEqual(middle([1]), []); // Should pass
-assertArraysEqual(middle([1, 2]), []); // Should pass
-assertArraysEqual(middle([1, 2, 3]), [2]); // Should pass
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // Should pass
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // Should pass
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // Should pass
+module.exports = middle;
