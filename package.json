@@ -2,7 +2,7 @@
   "name": "@davidgir/lotide_project",
   "version": "1.0.0",
   "description": "Lodash mini clone",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
