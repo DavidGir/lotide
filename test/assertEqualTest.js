@@ -1,10 +1,23 @@
 // test/assertEqualTest.js
+const assert = require('chai').assert;
 const assertEqual = require('../assertEqual');
 
+describe("#assertEqual", () => {
 
-// Test Code for assertEqual function:
-assertEqual("Lighthouse Labs", "Bootcamp"); // Should fail.
-assertEqual(1, 1); // Should pass.
-assertEqual("Flowers", "Flowers"); // Should pass.
-assertEqual(2, 8); // Should fail.
+  it("should return false for 'Lighthouse Labs' and 'Bootcamp'", () => {
+    assert.notStrictEqual("Lighthouse Labs", "Bootcamp");
+  });
+
+  it("should return true for 1 and 1", () => {
+    assert.strictEqual(1, 1);
+  });
+
+  it("should return true for 'Flowers' and 'Flowers'", () => {
+    assert.strictEqual("Flowers", "Flowers");
+  });
+
+  it("should return false for 2 and 8", () => {
+    assert.notStrictEqual(2, 8);
+  });
+});
 
